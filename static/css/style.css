@@ -4,6 +4,15 @@
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
+
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"),
+       url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"),
+       url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"),
+       url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal
 }
 /* =======================================================
 *
@@ -12,7 +21,8 @@
 *
 * ======================================================= */
 body {
-  font-family: "Roboto", Arial, serif;
+  font-family: Arial, sans-serif;
+  
   line-height: 1.8;
   font-size: 16px;
   background: #fff;
@@ -75,8 +85,13 @@ figure {
   padding-top: 40px;
   margin-bottom: 30px;
 }
-#fh5co-header #fh5co-logo img {
-  max-width: 100%;
+#fh5co-header #fh5co-logo {
+  
+    font-family: Bernard MT Condensed; /* Sesuaikan dengan nama font yang ingin Anda gunakan */
+    font-size: 24px; /* Sesuaikan ukuran font jika diperlukan */
+    font-weight: bold; /* Sesuaikan berat font jika diperlukan */
+    color: #e71c1c; /* Sesuaikan dengan kode warna yang diinginkan */
+    text-decoration: none;
 }
 #fh5co-header nav {
   padding-top: 20px;
