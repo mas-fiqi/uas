@@ -1,252 +1,109 @@
 {% load static %}
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Present &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KFC Landing Page | Responsive Design</title>
+  <link rel="stylesheet" href="{% static 'css/style_hom.css' %}">
+</head>
+<body>
+  <section class="main">
+    <header>
+      <a href="#"><img src="{% static 'img/logo2.png' %}" class="logo"></a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="text">
+        <h2>Its Finger<br>Lickin <span>Good.</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, adipisci obcaecati! Accusamus fugiat obcaecati nesciunt maiores rerum placeat amet voluptatibus cumque soluta similique saepe, assumenda eos dolorum autem. Iusto enim accusamus optio cupiditate earum ipsam!</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="slider">
+        <div class="slides active">
+          <img src="{% static 'img/burger_fries.png' %}">
+        </div>
+        <div class="slides">
+          <img src="{% static 'img/french_fries.png' %}">
+        </div>
+        <div class="slides">
+          <img src="{% static 'img/burger.png' %}">
+        </div>
+        <div class="slides">
+          <img src="{% static 'img/fried_chicken.png' %}">
+        </div>
+      </div>
+    </div>
 
-  <!-- 
-	//////////////////////////////////////////////////////
+    <div class="footer">
+      <ul class="sci">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
+      <div class="prevNext">
+        <p>Always Fresh</p>
+        <span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
+        <span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+  <script>
+    //toggle 
+    const menutoggle = document.querySelector('.toggle');
+    const navigation = document.querySelector('.navigation');
+    menutoggle.onclick = function(){
+      menutoggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
 
-	//////////////////////////////////////////////////////
-	 -->
+    //slider
+    const slides = document.querySelectorAll('.slides');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    i = 0;
+    
+    function ActiveSlide(n){
+      for(slide of slides)
+      slide.classList.remove('active');
+      slides[n].classList.add('active');
+    }
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    // function for next btn
+    next.addEventListener('click', function(){
+      if(i == slides.length - 1){
+        i = 0;
+        ActiveSlide(i);
+      }
+      else 
+      {
+        i++;
+        ActiveSlide(i);
+      }
+    })
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-	<!-- Superfish -->
-	<link rel="stylesheet" href="{% static 'css/superfish.css' %}">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
-
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-
-	<!-- Modernizr JS -->
-	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-
-		<header id="fh5co-header" role="banner">
-			<div class="container text-center">
-				<div id="fh5co-logo">
-					<a href="index">wallpaper</a>
-				</div>
-				<nav>
-					<ul>
-						<li ><a href="about">About</a></li>
-						<li ><a href="{% url 'work' %}">Work</a></li>
-						<li ><a href="contact">Contact</a></li>
-                        <li class="active"><a href="hom">hom</a></li>
-						<li><a href="#">Instagram</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<!-- END #fh5co-header -->
-
-		<div class="page-content">
-			<h1 class="mb0">Your Project Title Here</h1>
-			<div class="meta"><span><a href="#">Packaging</a>, <a href="#">Illustration</a></span></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quaerat nostrum, neque cum, quidem inventore consequatur sunt optio sint! Veritatis maiores recusandae dolores nihil cumque, eaque eius obcaecati voluptatum necessitatibus.</p>
-			<p><img src="{% static 'img/img_large_1.jpg' %}" alt="Free HTML5 by FreeHTML5.co"></p>
-			<p><img src="{% static 'img/img_large_2.jpg' %}" alt="Free HTML5 by FreeHTML5.co"></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe officia, consectetur praesentium minus reiciendis, accusamus consequuntur iusto ad illum quibusdam commodi facere tenetur. Culpa quia laborum quam, sint laboriosam delectus veniam, at molestiae magnam iusto similique dolorem ea doloremque!</p>
-			<p><img src="{% static 'img/img_large_3.jpg' %}" alt="Free HTML5 by FreeHTML5.co"></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe officia, consectetur praesentium minus reiciendis, accusamus consequuntur iusto ad illum quibusdam commodi facere tenetur. Culpa quia laborum quam, sint laboriosam delectus veniam, at molestiae magnam iusto similique dolorem ea doloremque!</p>
-			<p>Ullam recusandae error odit eveniet soluta temporibus quis mollitia dignissimos quasi, magni culpa sed, minima atque quae a vitae dolores, illo cum sint! Quaerat rem incidunt nihil laborum nulla placeat soluta, fugit dolor aperiam facere itaque laboriosam error ratione praesentium.</p>
-		</div>
-
-		<div class="container-fluid">
-			<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
-				<div class="fh5co-project masonry-brick">
-					<a href=" single ">
-						<img src="{% static 'img/img_20.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_19.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_3.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_4.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_5.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_6.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_7.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_8.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Youect Tie</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_9.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Youere</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_10.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Project Title He
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_11.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your Pro</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_12.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2> Project Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_13.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2> Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_14.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2> Title Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_15.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your P</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_16.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2> Here</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_17.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>ayam</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_18.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Yo koso</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_19.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>Your</h2>
-					</a>
-				</div>
-				<div class="fh5co-project masonry-brick">
-					<a href="single">
-						<img src="{% static 'img/img_20.jpg' %}" alt="Free HTML5 by FreeHTML5.co">
-						<h2>car</h2>
-					</a>
-				</div>
-			</div>
-			<!--END .fh5co-projects-feed-->
-		</div>
-		<!-- END .container-fluid -->
-
-		<footer id="fh5co-footer" role="contentinfo">
-			<div class="container-fluid">
-				<div class="footer-content">
-					<div class="copyright"><small>&copy; 2023 Present. All Rights Reserved. <br>Designed by <a href="http://freehtml5.co/">FreeHTML5.co</a> Images: <a href="http://graphicburger.com/">GraphicBurger</a></small></div>
-					<div class="social">
-						<a href="#"><i class="icon-facebook3"></i></a>
-						<a href="#"><i class="icon-instagram2"></i></a>
-						<a href="#"><i class="icon-linkedin2"></i></a>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- END #fh5co-footer -->
-		
-	<!-- jQuery -->
-	<script src="{% static 'js/jquery.min.js' %}"></script>
-	<!-- Bootstrap -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<!-- masonry -->
-	<script src="{% static 'js/jquery.masonry.min.js' %}"></script>
-	<!-- MAIN JS -->
-	<script src="{% static 'js/main.js' %}"></script>
-
-	</body>
+     // function for prev btn
+     prev.addEventListener('click', function(){
+      if(i == 0){
+        i = slides.length - 1;
+        ActiveSlide(i);
+      }
+      else 
+      {
+        i--;
+        ActiveSlide(i);
+      }
+    })
+  </script>
+</body>
 </html>
-
