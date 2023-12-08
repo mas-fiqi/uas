@@ -20,4 +20,6 @@ def contact(request):
 def about(request):
   template = loader.get_template('about.html')
   return HttpResponse(template.render())
-
+def index1(request):
+  template = loader.get_template('index1.html')
+  return HttpResponse(template.render())

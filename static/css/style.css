@@ -54,7 +54,6 @@ p, ul, ol {
   color: #1d1b1b;
   font-family: "Roboto", Arial, serif;
 }
-
 h1, h2, h3, h4, h5, h6 {
   color: #131212;
   font-family: "Roboto", Arial, serif;
@@ -130,13 +129,13 @@ figure {
 }
 
 .fh5co-projects-feed, .footer-content {
-  margin: 0 auto;
+  margin: 60px;
   max-width: 1400px;
 }
 
 .fh5co-projects-feed .fh5co-project {
   float: left;
-  margin: 20px 20px 20px;
+  margin: 10px 10px 20px;
   width: 290px;
 }
 @media screen and (max-width: 480px) {
@@ -144,6 +143,7 @@ figure {
     margin: 10px 10px 10px;
   }
 }
+
 .fh5co-projects-feed .fh5co-project > a {
   display: block;
   text-align: center;
