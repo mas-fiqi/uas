@@ -19,11 +19,11 @@ from django.urls import include, path
 from hidup.views import *
 
 urlpatterns = [
-    path('', work, name='work'),
+    path('', hom, name='hom'),
+    path('work', work, name='work'),
     path('single', single, name='single'),
     path('index', index, name='index'),
     path('contact', contact, name='contact'),
-    path('hom', hom, name='hom'),
     path('about', about, name='about'),
     path('index1', index1, name='index1'),
     path('admin/', admin.site.urls),

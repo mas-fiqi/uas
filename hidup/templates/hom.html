@@ -4,25 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KFC Landing Page | Responsive Design</title>
+  <title>MR.Q</title>
   <link rel="stylesheet" href="{% static 'css/style_hom.css' %}">
+  <style rel="stylesheet" href="{% static 'img/tema1.jpg' %}">
+   
+    body {
+        background: url("{% static 'img/tema1.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
 </head>
 <body>
   <section class="main">
     <header>
-      <a href="#"><img src="{% static 'img/logo2.png' %}" class="logo"></a>
+      <a href="#"><img src="{% static 'img/logo3.png' %}" class="logo"></a>
       <div class="toggle"></div>
       <ul class="navigation">
-        <li><a href="#">Hom</a></li>
-        <li><a href="#">MeNu</a></li>
+        <li><a href="work">MeNu</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="https://telegram.org/dl">Contact</a></li>
       </ul>
     </header>
     <div class="content">
       <div class="text">
-        <h2>Its Finger<br>Lickin <span>Good.</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, adipisci obcaecati! Accusamus fugiat obcaecati nesciunt maiores rerum placeat amet voluptatibus cumque soluta similique saepe, assumenda eos dolorum autem. Iusto enim accusamus optio cupiditate earum ipsam!</p>
+        <h2>MR.Q<br>Welcome<span>Brader</span></h2>
+        <p>Selamag datang di wabsite "wallpaper"  saya ucapkan terimakasih telah mengunjungi website petama saya semoga website kami memenuhi apa yg anda cari  </p>
         <a href="#" class="btn">Order Now</a>
       </div>
       <div class="slider">
@@ -36,8 +42,15 @@
           <img src="{% static 'img/burger.png' %}">
         </div>
         <div class="slides">
-          <img src="{% static 'img/fried_chicken.png' %}">
+          <img src="{% static 'img/img_10.jpg' %}">
         </div>
+        <div class="slides">
+          <img src="{% static 'img/img_11.jpg' %}">
+        </div>
+        <div class="slides">
+          <img src="{% static 'img/img_13.jpg' %}">
+        </div>
+        
       </div>
     </div>
 
@@ -48,7 +61,7 @@
         <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
       </ul>
       <div class="prevNext">
-        <p>Always Fresh</p>
+        <p>wallpaper</p>
         <span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
         <span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
       </div>

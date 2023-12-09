@@ -6,17 +6,17 @@
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
-.main
-{
+.main {
   position: relative;
   min-height: 100vh;
-  background: radial-gradient(#f0483a,#d10a20);
+  background: url('{% static "img/tema1.jpg" %}') center/cover no-repeat; /* Perbarui baris ini dengan path gambar Anda */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px 100px;
 }
+
 header
 {
   position: absolute;
