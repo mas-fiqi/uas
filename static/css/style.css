@@ -25,7 +25,7 @@ body {
   
   line-height: 1.8;
   font-size: 16px;
-  background: #f7f5f5;
+  background: #f7f5f5 #2da9d7;
   color: #9b9a9a;
   font-weight: 300;
   overflow-x: hidden;
@@ -129,14 +129,31 @@ figure {
 }
 
 .fh5co-projects-feed, .footer-content {
-  margin: 170px;
+  margin: 160px;
   max-width: 1900px;
+}
+/* Tambahkan CSS berikut untuk gambar responsif */
+.fh5co-project > a img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sesuaikan tata letak masonry agar responsif */
+.fh5co-projects-feed {
+  column-count: 3; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
+  column-gap: 20px; /* Sesuaikan jarak antar kolom */
 }
 
 .fh5co-projects-feed .fh5co-project {
+  width: 100%; /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
+  margin-bottom: 20px; /* Tambahkan sedikit ruang antar proyek */
+}
+
+
+.fh5co-projects-feed .fh5co-project {
   float: 100px;
-  margin: 2px 20px 5px;
-  width: 290px;
+  margin: 1px 20px 5px;
+  width: 280px;
 }
 @media screen and (max-width: 980px) {
   .fh5co-projects-feed .fh5co-project {
@@ -219,24 +236,25 @@ figure {
 #fh5co-footer {
   float: left;
   width: 100%;
-  background: #ebebeb;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background: #afafaf;
   text-align: center;
-  color: #999999;
+  color: #111111;
+ 
+
 }
 #fh5co-footer a {
-  color: #bfbfbf;
+  color: #fcfcfc;
 }
+
 #fh5co-footer a:hover, #fh5co-footer a:active, #fh5co-footer a:focus {
   color: #000 !important;
 }
 #fh5co-footer .social {
-  margin-top: 20px;
+  margin-top: 1%;
 }
 #fh5co-footer .social a {
-  padding: 10px;
-  color: #999999 !important;
+  padding: 5px;
+  color: #030303 !important;
 }
 @media screen and (max-width: 480px) {
   #fh5co-footer .social a {
@@ -244,7 +262,7 @@ figure {
   }
 }
 #fh5co-footer .social a:hover, #fh5co-footer .social a:active, #fh5co-footer .social a:focus {
-  color: #000 !important;
+  color: #f5f5f5 !important;
 }
 
 .square {

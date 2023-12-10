@@ -9,7 +9,7 @@
 .main {
   position: relative;
   min-height: 100vh;
-  background: url('../img/tema1.jpg') center/cover no-repeat; /* Perbarui baris ini dengan path gambar Anda */
+  background: url('../img/tema1.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
