@@ -136,6 +136,7 @@ figure {
 .fh5co-project > a img {
   max-width: 100%;
   height: auto;
+  /* margin-top: 450px; */
 }
 
 /* Sesuaikan tata letak masonry agar responsif */
@@ -152,7 +153,7 @@ figure {
 
 .fh5co-projects-feed .fh5co-project {
   float: 100px;
-  margin: 1px 20px 5px;
+  margin: 450px 20px 1px;
   width: 280px;
 }
 @media screen and (max-width: 980px) {
