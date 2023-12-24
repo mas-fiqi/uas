@@ -1,5 +1,69 @@
 {% load static %}
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Flex Card Hover Slider </title>
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="flex-container">
+	<div class="flex-slide home">
+    <div class="flex-title flex-title-home">Beauty</div>
+    <div  class="flex-about flex-about-home"><p>
+      <a href="{% url 'work' %}">Welcome!</a></p>
+    </div>
+	</div>
+	<div class="flex-slide about">
+		<div class="flex-title">Technology</div>
+		<div class="flex-about"><p>
+      <a href="{% url 'work' %}">Welcome!</a></p>
+    </div>
+	</div>
+	<div class="flex-slide work">
+		<div class="flex-title">Work</div>
+		<div class="flex-about"><p>Selebgram</p>
+			<ul>
+				<li>First piece of work</li>
+				<li>Second piece of work</li>
+				<li>Third piece of work</li>
+			</ul>
+		</div>
+	</div>
+	<div class="flex-slide contact">
+		<div class="flex-title">Contact</div>
+				<div class="flex-about">
+					<p>Use the contact form below</p>
+					<form class="contact-form">
+						<p>Email <input type="text" name="email"></p>
+						<p>Comment <textarea type="text" name="comment" row="5"></textarea></p>
+						<p><input type="submit" name="email" value="Send Message"></p>
+					</form>
+
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
+<script  src="{% static 'js/navbar.js' %}"></script>
+<script>
+  // Kode JavaScript yang sudah ada
+
+  // Tambahkan event listener untuk elemen "tombol masuk"
+  document.getElementById('tombolMasuk').addEventListener('click', function() {
+    // Lakukan tindakan yang diinginkan di sini
+    alert('Button clicked!'); // Contoh: Menampilkan peringatan
+  });
+</script>
+</body>
+</html>
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -61,7 +125,7 @@
       </div>
     </div>
   </section>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></sc>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <script>
@@ -113,4 +177,4 @@
     })
   </script>
 </body>
-</html>
+</html> -->

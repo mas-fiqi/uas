@@ -25,8 +25,8 @@ body {
   
   line-height: 1.8;
   font-size: 16px;
-  background: #f7f5f5 #2da9d7;
-  color: #9b9a9a;
+  background: #0e0d0d #2da9d7;
+  color: #918f8f;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -118,6 +118,19 @@ figure {
     padding: 5px;
   }
 }
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+#like-btn {
+  background-color: #e74c3c; /* Ganti warna sesuai kebutuhan */
+}
+
 #fh5co-header nav ul li a:hover, #fh5co-header nav ul li a:active, #fh5co-header nav ul li a:focus {
   color: #df0909 !important;
   text-decoration: none;
@@ -129,8 +142,8 @@ figure {
 }
 
 .fh5co-projects-feed, .footer-content {
-  margin: 160px;
-  max-width: 1900px;
+  margin: 30px;
+  max-width: 4344px;
 }
 /* Tambahkan CSS berikut untuk gambar responsif */
 .fh5co-project > a img {
@@ -138,37 +151,68 @@ figure {
   height: auto;
   /* margin-top: 450px; */
 }
+body {
+  overflow-x: hidden;
+}
 
 /* Sesuaikan tata letak masonry agar responsif */
 .fh5co-projects-feed {
-  column-count: 3; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
-  column-gap: 20px; /* Sesuaikan jarak antar kolom */
+   /* Sesuaikan jumlah kolom sesuai keinginan Anda */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .fh5co-projects-feed .fh5co-project {
-  width: 100%; /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
-  margin-bottom: 20px; /* Tambahkan sedikit ruang antar proyek */
+ /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
+ width: 100%;
+}
+.fh5co-project.custom-first-row .project-info {
+  padding: 10px;
+  background-color: #fff; /* Misalnya, memberikan latar belakang putih */
 }
 
-
-.fh5co-projects-feed .fh5co-project {
-  float: 100px;
-  margin: 450px 20px 1px;
-  width: 280px;
+.fh5co-project.custom-first-row .project-info h3 {
+  margin-top: 0;
+  font-size: 18px;
 }
-@media screen and (max-width: 980px) {
-  .fh5co-projects-feed .fh5co-project {
-    margin: 20px 20px 10px;
+
+.fh5co-project.custom-first-row .project-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+ 
+ .fh5co-projects-feed .fh5co-project {
+  width: 100%;
+ }
+ .container-fluid {
+  max-width: 1200px; /* Sesuaikan sebagaimana diperlukan */
+  margin: 0 auto; /* Pusatkan kontainer */
+}
+
+@media screen and (min-width: 768px) {
+  .fh5co-projects-feed {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .fh5co-projects-feed {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
 
 .fh5co-projects-feed .fh5co-project > a {
   display: block;
   text-align: center;
 }
 .fh5co-projects-feed .fh5co-project > a img {
-  margin-bottom: 30px;
+  max-width: 100%;
+  height: 100%; /* Tambahkan baris ini */
 }
+
 .fh5co-projects-feed .fh5co-project > a h2 {
   font-size: 14px;
   color: #999999;

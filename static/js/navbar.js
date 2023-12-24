@@ -17,3 +17,6 @@ $(".flex-slide").each(function(){
         });
     })
 });
+// script.js 1
+
+
