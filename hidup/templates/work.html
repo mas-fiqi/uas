@@ -20,326 +20,1500 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <!-- 
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/superfish.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'css/superfish.css' %}" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-e2rSSDFrLjOvI0vsl5E90qYK6W5jPFDcRZc1YNOJJwYQ2q1Fn9pF4FpLTjQVgyLd" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-e2rSSDFrLjOvI0vsl5E90qYK6W5jPFDcRZc1YNOJJwYQ2q1Fn9pF4FpLTjQVgyLd"
+      crossorigin="anonymous"
+    />
 
-
-	<!-- static js -->
+    <!-- static js -->
     <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
-    
+    <style>
+      /* Gaya ikon download */
+    </style>
   </head>
   <body>
-  <div> 
-
     <header>
-      <input type ="checkbox" name ="" id ="chk1">
-      <div class="logo"><h1>Web Master</h1></div>
-          <div class="search-box">
-              <form>
-                  <input type ="text" name ="search" id ="srch" placeholder="Search">
-                  <button type ="submit"><i class="fa fa-search"></i></button>
-              </form>
-          </div>
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-              <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
-                    
-              </li>
-          </ul>
-          <div class="menu">
-              <label for="chk1">
-                  <i class="fa fa-bars"></i>
-              </label>
-          </div>
-  </header>
-    <!-- <style>
-      /* Tambahkan gaya untuk bagian komentar */
-      .container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px; /* Sesuaikan lebar sesuai kebutuhan */
-}
+      <input type="checkbox" name="" id="chk1" />
+      <div class="logo"><h1>Website saya</h1></div>
+      <div class="search-box">
+        <form>
+          <input type="text" name="search" id="srch" placeholder="Search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="{% url 'comen' %}">Comen</a></li>
+        <li>
+          <a href="https://www.facebook.com/haukal.sanjaiya?locale=id_ID"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/xioan_yan_/"
+            ><i class="fa fa-telegram"></i
+          ></a>
+          <a href="https://www.instagram.com/xioan_yan_/"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="menu">
+        <label for="chk1">
+          <i class="fa fa-bars"></i>
+        </label>
+      </div>
+    </header>
+    <div class="container-fluid pt70 pb70">
+      <div
+        id="fh5co-projects-feed"
+        class="fh5co-projects-feed clearfix masonry"
+      >
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/0.jpg' %}">
+            <img
+              src="{% static 'img/0.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/1.jpg' %}">
+            <img
+              src="{% static 'img/1.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/3.jpg' %}">
+            <img
+              src="{% static 'img/3.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/4.jpg' %}">
+            <img
+              src="{% static 'img/4.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/5.jpg' %}">
+            <img
+              src="{% static 'img/5.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/6.jpg' %}">
+            <img
+              src="{% static 'img/6.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/7.jpg' %}">
+            <img
+              src="{% static 'img/7.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/8.jpg' %}">
+            <img
+              src="{% static 'img/8.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/9.jpg' %}">
+            <img
+              src="{% static 'img/9.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/11.jpg' %}">
+            <img
+              src="{% static 'img/11.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/12.jpg' %}">
+            <img
+              src="{% static 'img/12.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/13.jpg' %}">
+            <img
+              src="{% static 'img/13.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/14.webp' %}">
+            <img
+              src="{% static 'img/14.webp' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/15.webp' %}">
+            <img
+              src="{% static 'img/15.webp' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/16.webp' %}">
+            <img
+              src="{% static 'img/16.webp' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/17.jpg' %}">
+            <img
+              src="{% static 'img/17.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/18.webp' %}">
+            <img
+              src="{% static 'img/18.webp' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/19.jpg' %}">
+            <img
+              src="{% static 'img/19.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/20.jpg' %}">
+            <img
+              src="{% static 'img/20.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
 
-#fh5co-projects-feed {
-  flex: 1;
-}
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/21.jpg' %}">
+            <img
+              src="{% static 'img/21.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/22.jpg' %}">
+            <img
+              src="{% static 'img/22.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/23.jpg' %}">
+            <img
+              src="{% static 'img/23.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/24.jpg' %}">
+            <img
+              src="{% static 'img/24.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/25.jpg' %}">
+            <img
+              src="{% static 'img/25.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/26.jpg' %}">
+            <img
+              src="{% static 'img/26.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/27.jpg' %}">
+            <img
+              src="{% static 'img/27.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/28.jpg' %}">
+            <img
+              src="{% static 'img/28.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/29.jpg' %}">
+            <img
+              src="{% static 'img/29.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/30.jpg' %}">
+            <img
+              src="{% static 'img/30.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
 
-.comment-section {
-  flex: 1;
-  margin-left: 20px; /* Sesuaikan margin sesuai kebutuhan */
-}
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/31.jpg' %}">
+            <img
+              src="{% static 'img/31.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/32.jpg' %}">
+            <img
+              src="{% static 'img/32.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/33.jpg' %}">
+            <img
+              src="{% static 'img/33.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/34.jpg' %}">
+            <img
+              src="{% static 'img/35.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/36.jpg' %}">
+            <img
+              src="{% static 'img/37.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/38.jpg' %}">
+            <img
+              src="{% static 'img/38.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/39.jpg' %}">
+            <img
+              src="{% static 'img/39.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/40.jpg' %}">
+            <img
+              src="{% static 'img/40.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/41.jpg' %}">
+            <img
+              src="{% static 'img/41.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/42.jpg' %}">
+            <img
+              src="{% static 'img/42.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
 
-      .comments-list {
-        margin-top: 30px;
-      }
-    
-      .komentar {
-        margin-bottom: 10px;
-        padding: 10px;
-        background-color: #f2f2f2;
-        border-radius: 6px;
-      }
-    
-      .comment-form {
-        margin-top: 20px;
-      }
-    
-      #comment-text {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-    
-      button {
-        padding: 8px 16px;
-        background-color: #2da9d7;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-    </style> -->
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/43.jpg' %}">
+            <img
+              src="{% static 'img/43.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/44.jpg' %}">
+            <img
+              src="{% static 'img/44.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/45.jpg' %}">
+            <img
+              src="{% static 'img/45.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/46.jpg' %}">
+            <img
+              src="{% static 'img/46.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/47.jpg' %}">
+            <img
+              src="{% static 'img/48.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/49.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
 
-  <!-- <div id="comment-section" class="comment-section">
-    <h2>Komentar</h2>
-    <div id="comments-list" class="comments-list"> -->
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
 
-      <!-- Komentar akan ditambahkan secara dinamis di sini -->
-      
-    <!-- </div>
-    <div id="comment-form" class="comment-form">
-      <textarea id="comment-text" placeholder="Tulis komentar"></textarea>
-      <button onclick="tambahKomentar()">Tambah Komentar</button>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">38</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">79</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">88</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">34</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">358</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">59</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">338</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">759</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">48</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+        <figure class="fh5co-project masonry-brick">
+          <a class="{% static 'img/2.jpg' %}">
+            <img
+              src="{% static 'img/2.jpg' %}"
+              alt="Free HTML5 by FreeHTML5.co"
+            />
+            <!-- <figcaption>mf</figcaption> -->
+            <div class="like-container">
+              <div class="like-icon" onclick="suka(this)">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <span class="like-count">23</span>
+            </div>
+            <div class="download-icon">
+              <a href="{URL_FILE_YANG_DIUNDUH}" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+            </div>
+          </a>
+        </figure>
+      </div>
+
+      <!-- Sisipkan proyek lainnya di sini dengan format yang sama -->
     </div>
-  </div> -->
-
-  <!-- <div class="container">
-    <div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
-      <a class="{% static 'img/2.jpg' %}">
-        <img src="{% static 'img/2.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-        <figcaption>mf</figcaption>
-        <div class="like-container">
-          <div class="like-icon" onclick="suka(this)">
-            <i class="fa fa-thumbs-up"></i>
-          </div>
-          <span class="like-count">0</span>
-   
-    </div>
-  
-    <div id="comment-section" class="comment-section">
-   
-    </div>
-  </div> -->
-  
-  
-<div class="container-fluid pt70 pb70">
-<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">  
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/2.jpg' %}">
-      <img src="{% static 'img/2.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>mf</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-      <div class="comment-container">
-        <div class="comment-icon">
-          <i class="far fa-comment"></i>
-        </div>
-        <span class="comment-count">0</span>
-      </div>
-      
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/23.jpg' %}">
-      <img src="{% static 'img/0.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/26.jpg' %}">
-      <img src="{% static 'img/26.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/27.jpg' %}">
-      <img src="{% static 'img/27.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/23.jpg' %}">
-      <img src="{% static 'img/23.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/21.jpg' %}">
-      <img src="{% static 'img/21.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/22.jpg' %}">
-      <img src="{% static 'img/22.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/20.jpg' %}">
-      <img src="{% static 'img/20.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/19.jpg' %}">
-      <img src="{% static 'img/19.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/20.jpg' %}">
-      <img src="{% static 'img/20.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/9.jpg' %}">
-      <img src="{% static 'img/9.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/7.jpg' %}">
-      <img src="{% static 'img/7.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-
-  <figure class="fh5co-project masonry-brick">
-    <a class="{% static 'img/3.jpg' %}">
-      <img src="{% static 'img/3.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
-      <figcaption>m</figcaption>
-      <div class="like-container">
-        <div class="like-icon" onclick="suka(this)">
-          <i class="fa fa-thumbs-up"></i>
-        </div>
-        <span class="like-count">0</span>
-      </div>
-    </a>
-  </figure>
-
-
-
-  <!-- Sisipkan proyek lainnya di sini dengan format yang sama -->
-</div>
-</div>
 
     <footer id="fh5co-footer" role="contentinfo">
       <div class="container-fluid">
         <div class="footer-content">
           <div class="copyright">
             <small
-              >&copy; 2023 Present. All Rights Reserved. <br />Designed by
-              <a href="http://freehtml5.co/">FreeHTML5.co</a> Images:
-              <a href="http://graphicburger.com/">GraphicBurger</a>
-			</small>
+              >&copy; 2023 Website kami dimulai. <br />Designed by
+              <a href="mailto:alamat.moh.rafiqi.wahyudi@gmail.com">Gmail</a>
+              Images:
+              <a href="https://www.instagram.com/xioan_yan_/">MAS.FIQI</a>
+            </small>
           </div>
           <div class="social">
-            <a href="#"><i class="icon-facebook3"></i></a>
-            <a href="#"><i class="icon-instagram2"></i></a>
-            <a href="#"><i class="icon-linkedin2"></i></a>
+            <a href="https://www.facebook.com/haukal.sanjaiya?locale=id_ID"
+              ><i class="icon-facebook3"></i
+            ></a>
+            <a href="https://www.instagram.com/xioan_yan_/"
+              ><i class="icon-instagram2"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -351,42 +1525,6 @@
     <script src="{% static 'js/jquery.masonry.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
-    <script  src="{% static 'js/navbar.js' %}"></script>
-    <script>
-   $('.fh5co-project').hover(function() {
-  $(this).find('.like-icon').css('display', 'block');
-}, function() {
-  $(this).find('.like-icon').css('display', 'none');
-});
-
-  let jumlahSuka = 0;
-
-  function suka(iconSuka) {
-    jumlahSuka++;
-    const elemenJumlahSuka = iconSuka.parentElement.querySelector('.like-count');
-    elemenJumlahSuka.textContent = jumlahSuka;
-  }
-
-
- 
-  // JavaScript untuk menangani komentar
-  function tambahKomentar() {
-    var teksKomentar = document.getElementById("comment-text").value;
-    if (teksKomentar.trim() !== "") {
-      var daftarKomentar = document.getElementById("comments-list");
-      var elemenKomentar = document.createElement("div");
-      elemenKomentar.className = "komentar";
-      elemenKomentar.textContent = teksKomentar;
-      daftarKomentar.appendChild(elemenKomentar);
-
-      // Bersihkan isian input komentar
-      document.getElementById("comment-text").value = "";
-    }
-  }
-
-
-
-
-</script>
-</body>
+    <script src="{% static 'js/navbar.js' %}"></script>
+  </body>
 </html>

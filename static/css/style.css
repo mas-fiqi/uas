@@ -48,8 +48,8 @@ header{
   align-items: center;
   position: fixed;
   z-index: 99;
-  box-shadow: 0 0 10px #000;
-  background: rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px #000000;
+  background: rgba(250, 249, 249, 0);
 }
 #chk1{
   display: none;
@@ -57,12 +57,12 @@ header{
    
 }
 i{
-  color: #fff;
+  color: #089cff;
   cursor: pointer;
 }
 header .logo{
   flex: 1;
-  color:#fff;
+  color:#0f0f0f;
    
   margin-left: 50px;
   text-transform: uppercase;
@@ -77,9 +77,9 @@ header .search-box{
   height: 40px;
   border: none;
   outline: none;
-  background:#f2f2f2;
+  background:#93999c;
   border-radius: 30px;
-  color:gray;
+  color:rgb(10, 25, 167);
   font-size: 16px;
   padding-left: 5px;
   padding-right: 40px;
@@ -97,7 +97,7 @@ header .search-box{
   right: 0;
   transform: scale(0.9);
   background: green;
-  color: #fff;
+  color: #b91010;
 }
 header ul {
   flex:2;
@@ -109,7 +109,7 @@ header ul li{
 }
 header ul li a{
   text-decoration: none;
-  color:#fff;
+  color:#242323;
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 15px;
@@ -168,7 +168,7 @@ figure {
   background: #2da9d7;
 }
 ::selection {
-  color: #fcfcfc;
+  color: #110e0e;
   background: #0ba8e6;
 }
 @media screen and (max-width: 480px) {
@@ -321,7 +321,7 @@ figure {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 15px;
+  bottom: 27px;
   left: 0;
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -338,14 +338,14 @@ figure {
 }
 
 .like-icon i {
-  color: #333;
+  color: #0b71d1;
   font-size: 20px;
 }
 
 /* batas */
 
 #fh5co-footer a:hover, #fh5co-footer a:active, #fh5co-footer a:focus {
-  color: #000 !important;
+  color: #0854b6 !important;
 }
 #fh5co-footer .social {
   margin-top: 1%;

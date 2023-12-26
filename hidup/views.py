@@ -5,8 +5,8 @@ from django.template import loader
 def hom(request):
   template = loader.get_template('hom.html')
   return HttpResponse(template.render())
-def single(request):
-  template = loader.get_template('single.html')
+def comen(request):
+  template = loader.get_template('comen.html')
   return HttpResponse(template.render())
 def index(request):
   template = loader.get_template('index.html')
