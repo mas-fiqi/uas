@@ -19,8 +19,8 @@ from django.urls import include, path
 from hidup.views import *
 
 urlpatterns = [
-    path('', index1, name='index1'),
     path('', work, name='work'),
+    path('', index1, name='index1'),
     path('', hom, name='hom'),
     path('single', single, name='single'),
     path('index', index, name='index'),

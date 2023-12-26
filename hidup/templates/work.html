@@ -28,19 +28,21 @@
     <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-    <link rel="stylesheet" href="{% static 'css/icon-navbar.css' %}">
-    <!-- static js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-e2rSSDFrLjOvI0vsl5E90qYK6W5jPFDcRZc1YNOJJwYQ2q1Fn9pF4FpLTjQVgyLd" crossorigin="anonymous">
 
+
+	<!-- static js -->
+    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
     
   </head>
-  <body> 
-   
+  <body>
+  <div> 
+
     <header>
       <input type ="checkbox" name ="" id ="chk1">
-      <div class="logo"><h1>web MR.Q</h1></div>
+      <div class="logo"><h1>Web Master</h1></div>
           <div class="search-box">
               <form>
                   <input type ="text" name ="search" id ="srch" placeholder="Search">
@@ -49,9 +51,8 @@
           </div>
           <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Alam</a></li>
-              <li><a href="#">Electronic</a></li>
-              <li><a href="#">Selebgram</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Blog</a></li>
               <li><a href="#">Contact</a></li>
               <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -66,410 +67,264 @@
               </label>
           </div>
   </header>
-    
-      <!-- <header id="fh5co-header" role="banner">
-      <div class="container text-center">
-        <div id="fh5co-logo">
-          <a href="{% url 'hom' %}">wallpaper</a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="{% url 'about' %} ">selegram</a></li>
-            <li class="active"><a href="work">awal~</a></li>
-            <li><a href=" contact ">Contact</a></li>
-            <li><a href="{% url 'index1' %} ">sou</a></li>
-            <li>
-              <a
-                href="  https://www.instagram.com/?utm_source=pwa_homescreen&__pwa=1 "
-                >Instagram</a
-                >
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <hr />
-    </header> -->
+    <!-- <style>
+      /* Tambahkan gaya untuk bagian komentar */
+      .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px; /* Sesuaikan lebar sesuai kebutuhan */
+}
 
+#fh5co-projects-feed {
+  flex: 1;
+}
+
+.comment-section {
+  flex: 1;
+  margin-left: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
+
+      .comments-list {
+        margin-top: 30px;
+      }
     
-    <div class="container-fluid pt70 pb70">
-      <div
-        id="fh5co-projects-feed"
-        class="fh5co-projects-feed clearfix masonry">
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/0.jpg' %}">
-            <img
-              src="{% static 'img/0.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"/>
-            </a>
-           <a href="{% static 'img/0.jpg' %}" download class="button">Download</a>
-            <!-- <h2>mobile</h2> --> 
-          </div>
-          <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/1.jpg' %}">
-            <img
-              src="{% static 'img/1.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-          </a>
-          <a href="{% static 'img/1.jpg' %}" download class="button">Download</a>
-          <!-- <h2>tikus</h2> -->
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/2.jpg' %}">
-            <img
-              src="{% static 'img/2.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-              />
-              <a href="{% static 'img/0.jpg' %}" download class="button">Download</a>
-              <!-- <h2>kambing</h2> -->
-            </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/3.jpg' %}">
-            <img
-              src="{% static 'img/3.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-          </a>
-          <a href="#" class="button" id="like-btn-4">Ange!</a>
-          <a href="{% static 'img/0.jpg' %}" download class="button">Download</a>
-            <h2>ayam</h2>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/4.jpg' %}">
-            <img
-            src="{% static 'img/4.jpg' %}"
-            alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>kelinci</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/5.jpg' %}">
-            <img
-              src="{% static 'img/5.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>sapi</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/5.jpg' %}">
-            <img
-              src="{% static 'img/5.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>You</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/5.jpg' %}">
-            <img
-              src="{% static 'img/5.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>lalat</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/5.jpg' %}">
-            <img
-              src="{% static 'img/5.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>nyamuk</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/9.jpg' %}">
-            <img
-            src="{% static 'img/9.jpg' %}"
-            alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>cacing</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/0.jpg' %}">
-            <img
-              src="{% static 'img/0.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="{% static 'img/12.jpg' %}">
-            <img
-              src="{% static 'img/12.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/13.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/14.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/15.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/16.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/17.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/18.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/19.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/20.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-              />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/21.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/22.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/23.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/24.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/25.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/26.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/27.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/28.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/29.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/30.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/31.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/32.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/33.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/34.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/35.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/36.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-            src="{% static 'img/37.webp' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/38.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/39.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-              />
-              <h2>Your Project Title Here</h2>
-            </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="single">
-            <img
-              src="{% static 'img/1.jpg' %}"
-              alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-        <div class="fh5co-project masonry-brick">
-          <a href="#">
-            <img
-            src="{% static 'img/0.jpg' %}"
-            alt="Free HTML5 by FreeHTML5.co"
-            />
-            <h2>Your Project Title Here</h2>
-          </a>
-        </div>
-      </div>
+      .komentar {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 6px;
+      }
+    
+      .comment-form {
+        margin-top: 20px;
+      }
+    
+      #comment-text {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    
+      button {
+        padding: 8px 16px;
+        background-color: #2da9d7;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style> -->
+
+  <!-- <div id="comment-section" class="comment-section">
+    <h2>Komentar</h2>
+    <div id="comments-list" class="comments-list"> -->
+
+      <!-- Komentar akan ditambahkan secara dinamis di sini -->
+      
+    <!-- </div>
+    <div id="comment-form" class="comment-form">
+      <textarea id="comment-text" placeholder="Tulis komentar"></textarea>
+      <button onclick="tambahKomentar()">Tambah Komentar</button>
     </div>
+  </div> -->
+
+  <!-- <div class="container">
+    <div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
+      <a class="{% static 'img/2.jpg' %}">
+        <img src="{% static 'img/2.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+        <figcaption>mf</figcaption>
+        <div class="like-container">
+          <div class="like-icon" onclick="suka(this)">
+            <i class="fa fa-thumbs-up"></i>
+          </div>
+          <span class="like-count">0</span>
+   
+    </div>
+  
+    <div id="comment-section" class="comment-section">
+   
+    </div>
+  </div> -->
+  
+  
+<div class="container-fluid pt70 pb70">
+<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">  
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/2.jpg' %}">
+      <img src="{% static 'img/2.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>mf</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+      <div class="comment-container">
+        <div class="comment-icon">
+          <i class="far fa-comment"></i>
+        </div>
+        <span class="comment-count">0</span>
+      </div>
+      
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/23.jpg' %}">
+      <img src="{% static 'img/0.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/26.jpg' %}">
+      <img src="{% static 'img/26.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/27.jpg' %}">
+      <img src="{% static 'img/27.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/23.jpg' %}">
+      <img src="{% static 'img/23.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/21.jpg' %}">
+      <img src="{% static 'img/21.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/22.jpg' %}">
+      <img src="{% static 'img/22.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/20.jpg' %}">
+      <img src="{% static 'img/20.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/19.jpg' %}">
+      <img src="{% static 'img/19.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/20.jpg' %}">
+      <img src="{% static 'img/20.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/9.jpg' %}">
+      <img src="{% static 'img/9.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/7.jpg' %}">
+      <img src="{% static 'img/7.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+
+  <figure class="fh5co-project masonry-brick">
+    <a class="{% static 'img/3.jpg' %}">
+      <img src="{% static 'img/3.jpg' %}" alt="Free HTML5 by FreeHTML5.co" />
+      <figcaption>m</figcaption>
+      <div class="like-container">
+        <div class="like-icon" onclick="suka(this)">
+          <i class="fa fa-thumbs-up"></i>
+        </div>
+        <span class="like-count">0</span>
+      </div>
+    </a>
+  </figure>
+
+
+
+  <!-- Sisipkan proyek lainnya di sini dengan format yang sama -->
+</div>
+</div>
 
     <footer id="fh5co-footer" role="contentinfo">
       <div class="container-fluid">
@@ -490,15 +345,48 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.masonry.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
-    <script src="{% static 'js/navbar.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
-    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
-    
-    
-  </body>
+    <script  src="{% static 'js/navbar.js' %}"></script>
+    <script>
+   $('.fh5co-project').hover(function() {
+  $(this).find('.like-icon').css('display', 'block');
+}, function() {
+  $(this).find('.like-icon').css('display', 'none');
+});
+
+  let jumlahSuka = 0;
+
+  function suka(iconSuka) {
+    jumlahSuka++;
+    const elemenJumlahSuka = iconSuka.parentElement.querySelector('.like-count');
+    elemenJumlahSuka.textContent = jumlahSuka;
+  }
+
+
+ 
+  // JavaScript untuk menangani komentar
+  function tambahKomentar() {
+    var teksKomentar = document.getElementById("comment-text").value;
+    if (teksKomentar.trim() !== "") {
+      var daftarKomentar = document.getElementById("comments-list");
+      var elemenKomentar = document.createElement("div");
+      elemenKomentar.className = "komentar";
+      elemenKomentar.textContent = teksKomentar;
+      daftarKomentar.appendChild(elemenKomentar);
+
+      // Bersihkan isian input komentar
+      document.getElementById("comment-text").value = "";
+    }
+  }
+
+
+
+
+</script>
+</body>
 </html>

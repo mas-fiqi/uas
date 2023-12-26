@@ -14,32 +14,141 @@
   font-weight: normal;
   font-style: normal
 }
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
 body {
   font-family: Arial, sans-serif;
-  
   line-height: 1.8;
   font-size: 16px;
-  background: #0e0d0d #2da9d7;
-  color: #918f8f;
+  background: #f7f5f5 #2da9d7;
+  color: #9b9a9a;
   font-weight: 300;
   overflow-x: hidden;
 }
+
 body.fh5co-offcanvas {
   overflow: hidden;
 }
-
-a {
-  color: rgb(16, 167, 243);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+/* navbar  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
 }
+body{
+  background: url(bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+header{
+  width:100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0 0 10px #000;
+  background: rgba(0,0,0,0.5);
+}
+#chk1{
+  display: none;
+   
+   
+}
+i{
+  color: #fff;
+  cursor: pointer;
+}
+header .logo{
+  flex: 1;
+  color:#fff;
+   
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+header .search-box{
+  flex: 1;
+  position: relative;
+}
+.search-box input{
+  width:100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background:#f2f2f2;
+  border-radius: 30px;
+  color:gray;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 40px;
+  text-align: center;
+   
+}
+.search-box button{
+  cursor: pointer;
+  width:100px;
+  height: 40px;
+  border-radius: 30px;
+  border:none;
+  position: absolute;
+  top:0;
+  right: 0;
+  transform: scale(0.9);
+  background: green;
+  color: #fff;
+}
+header ul {
+  flex:2;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul li{
+  list-style: none;
+}
+header ul li a{
+  text-decoration: none;
+  color:#fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+header ul li a:hover{
+  border-bottom: 2px solid cadetblue;
+}
+header .menu{
+  font-size: 2.5em;
+  display: none;
+}
+@media(max-width:1000px){
+  .search-box button{
+      position: absolute;
+  }
+  header ul{
+      position: fixed;
+      top:100px;
+      right: -100%;
+      background: rgba(0,0,0,0.5);
+      height: calc(100vh - 100px);
+      width:50%;
+      flex-direction: column;
+      align-items: center;
+      transition: right 0.5s linear;
+  }
+   
+  header .menu{
+      display: block;
+      width:100px;
+      text-align: center;
+  }
+  #chk1:checked ~ ul{
+      right: 0;
+      
+  }
+
+}
+/* batas navbar */
 a:hover {
   text-decoration: none !important;
   color: #2da9d7 !important;
@@ -47,172 +156,88 @@ a:hover {
 a:active, a:focus {
   outline: none;
 }
-
-p, ul, ol {
-  margin-bottom: 1.5em;
-  font-size: 15px;
-  color: #1d1b1b;
-  font-family: "Roboto", Arial, serif;
-}
-h1, h2, h3, h4, h5, h6 {
-  color: #131212;
-  font-family: "Roboto", Arial, serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-}
-
 figure {
   margin-bottom: 2em;
 }
-
 ::-webkit-selection {
   color: #fcfcfc;
   background: #2da9d7;
 }
-
 ::-moz-selection {
   color: #fcfcfc;
   background: #2da9d7;
 }
-
 ::selection {
   color: #fcfcfc;
   background: #0ba8e6;
-}
-
-#fh5co-header {
-  padding-top: 40px;
-  margin-bottom: 30px;
-}
-#fh5co-header #fh5co-logo {
-    font-family: Bernard MT Condensed; /* Sesuaikan dengan nama font yang ingin Anda gunakan */
-    font-size: 24px; /* Sesuaikan ukuran font jika diperlukan */
-    font-weight: bold; /* Sesuaikan berat font jika diperlukan */
-    color: #0077ff; /* Sesuaikan dengan kode warna yang diinginkan */
-    text-decoration: none;
-}
-#fh5co-header nav {
-  padding-top: 20px;
-}
-#fh5co-header nav ul {
-  padding: 0;
-  margin: 0;
-}
-#fh5co-header nav ul li {
-  padding: 0;
-  margin: 0;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  display: inline;
-  list-style: none;
-  font-size: 15px;
-}
-
-#fh5co-header nav ul li a {
-  color: #999999 !important;
-  padding: 10px;
 }
 @media screen and (max-width: 480px) {
   #fh5co-header nav ul li a {
     padding: 5px;
   }
 }
-.button {
-  display: inline-block;
-  padding: 10px 15px;
-  margin-top: 10px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-}
 
-#like-btn {
-  background-color: #e74c3c; /* Ganti warna sesuai kebutuhan */
-}
 
-#fh5co-header nav ul li a:hover, #fh5co-header nav ul li a:active, #fh5co-header nav ul li a:focus {
-  color: #df0909 !important;
-  text-decoration: none;
-  outline: none;
-}
-#fh5co-header nav ul li.active a {
-  text-decoration: line-through !important;
-  color: rgb(17, 76, 238) !important;
-}
-
-.fh5co-projects-feed, .footer-content {
-  margin: 30px;
-  max-width: 4344px;
-}
+/* Tambahkan margin-top pada galeri foto untuk memisahkannya dari navbar */
+/* .container-fluid {
+  margin-top: 100px; 
+} */
 /* Tambahkan CSS berikut untuk gambar responsif */
+/* .fh5co-project > a img {
+  max-width: 100%;
+  height: auto;
+
+} */
 .fh5co-project > a img {
   max-width: 100%;
   height: auto;
-  /* margin-top: 450px; */
-}
-body {
-  overflow-x: hidden;
+  margin-bottom: 198px; /* Menambahkan margin bawah */
+  margin-top: 70px; /* Sesuaikan nilai margin atas sesuai kebutuhan */
 }
 
 /* Sesuaikan tata letak masonry agar responsif */
 .fh5co-projects-feed {
-   /* Sesuaikan jumlah kolom sesuai keinginan Anda */
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  column-count: 3; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
+  column-gap: 10px; /* Sesuaikan jarak antar kolom */
 }
-
 .fh5co-projects-feed .fh5co-project {
- /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
- width: 100%;
+  width: 100%; /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
+  margin-bottom: 10px; /* Tambahkan sedikit ruang antar proyek */
 }
-.fh5co-project.custom-first-row .project-info {
-  padding: 10px;
-  background-color: #fff; /* Misalnya, memberikan latar belakang putih */
+.fh5co-projects-feed .fh5co-project {
+  float: 100px;
+  margin: 4px 20px auto;
+  width: 290px;
 }
-
-.fh5co-project.custom-first-row .project-info h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-.fh5co-project.custom-first-row .project-info p {
-  font-size: 14px;
-  color: #555;
-}
-
- 
- .fh5co-projects-feed .fh5co-project {
-  width: 100%;
- }
- .container-fluid {
-  max-width: 1200px; /* Sesuaikan sebagaimana diperlukan */
-  margin: 0 auto; /* Pusatkan kontainer */
-}
-
-@media screen and (min-width: 768px) {
-  .fh5co-projects-feed {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+@media screen and (max-width: 980px) {
+  .fh5co-projects-feed .fh5co-project {
+    margin: 20px 20px 10px;
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .fh5co-projects-feed {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-
 .fh5co-projects-feed .fh5co-project > a {
   display: block;
   text-align: center;
 }
+/* .fh5co-projects-feed .fh5co-project > a img {
+  margin-bottom: 30px;
+} */
 .fh5co-projects-feed .fh5co-project > a img {
   max-width: 100%;
-  height: 100%; /* Tambahkan baris ini */
+  height: auto;
+  margin-bottom: 10px; /* Sesuaikan nilai ini untuk menggeser foto ke bawah */
 }
-
+.fh5co-projects-feed .fh5co-project > a figcaption {
+  font-size: 14px;
+  color: #999999;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.fh5co-projects-feed .fh5co-project > a:hover figcaption,
+.fh5co-projects-feed .fh5co-project > a:active figcaption,
+.fh5co-projects-feed .fh5co-project > a:focus figcaption {
+  color: #000;
+}
 .fh5co-projects-feed .fh5co-project > a h2 {
   font-size: 14px;
   color: #999999;
@@ -223,23 +248,19 @@ body {
 .fh5co-projects-feed .fh5co-project > a:hover h2, .fh5co-projects-feed .fh5co-project > a:active h2, .fh5co-projects-feed .fh5co-project > a:focus h2 {
   color: #000;
 }
-
 .masonry,
 .masonry .masonry-brick {
   -webkit-transition-duration: 0.7s;
   transition-duration: 0.7s;
 }
-
 .masonry {
   -webkit-transition-property: height, width;
   transition-property: height, width;
 }
-
 .masonry .masonry-brick {
   -webkit-transition-property: left, right, top;
   transition-property: left, right, top;
 }
-
 .page-content {
   margin: 0 auto;
   max-width: 620px;
@@ -277,7 +298,6 @@ body {
     padding-bottom: 30px;
   }
 }
-
 #fh5co-footer {
   float: left;
   width: 100%;
@@ -287,9 +307,42 @@ body {
  
 
 }
-#fh5co-footer a {
-  color: #fcfcfc;
+/* navbar-download */
+.fh5co-project a {
+  position: relative;
+  display: inline-block;
 }
+/* ao */
+
+
+/* navbar-like */
+/* Gaya ikon suka */
+.like-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.like-count {
+  margin-left: 5px;
+}
+
+.fh5co-project:hover .like-icon {
+  display: block;
+}
+
+.like-icon i {
+  color: #333;
+  font-size: 20px;
+}
+
+/* batas */
 
 #fh5co-footer a:hover, #fh5co-footer a:active, #fh5co-footer a:focus {
   color: #000 !important;
@@ -309,11 +362,9 @@ body {
 #fh5co-footer .social a:hover, #fh5co-footer .social a:active, #fh5co-footer .social a:focus {
   color: #f5f5f5 !important;
 }
-
 .square {
   list-style: square;
 }
-
 .pt70 {
   padding-top: 70px;
 }
@@ -322,7 +373,6 @@ body {
     padding-top: 30px;
   }
 }
-
 .pb70 {
   padding-bottom: 70px;
 }
