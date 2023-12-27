@@ -18,11 +18,12 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.8;
   font-size: 16px;
-  background: #f7f5f5 #2da9d7;
-  color: #9b9a9a;
+  background : #f8f8fa ;
+  color: #f5f1f1;
   font-weight: 300;
   overflow-x: hidden;
 }
+
 
 body.fh5co-offcanvas {
   overflow: hidden;
@@ -34,12 +35,12 @@ body.fh5co-offcanvas {
   box-sizing: border-box;
   font-family: Arial;
 }
-body{
+/* body{
   background: url(bg.jpg);
   background-size: cover;
   height: 100vh;
   background-position: center;
-}
+} */
 header{
   width:100%;
   height: 80px;
@@ -48,8 +49,8 @@ header{
   align-items: center;
   position: fixed;
   z-index: 99;
-  box-shadow: 0 0 10px #000000;
-  background: rgba(250, 249, 249, 0);
+  /* box-shadow: 0 0 10px #03031d; */
+  background: linear-gradient(to right, #003968, #437cad, rgb(43, 252, 217));
 }
 #chk1{
   display: none;
@@ -62,7 +63,7 @@ i{
 }
 header .logo{
   flex: 1;
-  color:#0f0f0f;
+  color:#f3eded;
    
   margin-left: 50px;
   text-transform: uppercase;
@@ -77,7 +78,7 @@ header .search-box{
   height: 40px;
   border: none;
   outline: none;
-  background:#93999c;
+  background:#f5f7f8;
   border-radius: 30px;
   color:rgb(10, 25, 167);
   font-size: 16px;
@@ -109,13 +110,13 @@ header ul li{
 }
 header ul li a{
   text-decoration: none;
-  color:#242323;
+  color:#f7f5f5;
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 15px;
 }
 header ul li a:hover{
-  border-bottom: 2px solid cadetblue;
+  border-bottom: 2px solid rgb(13, 146, 223);
 }
 header .menu{
   font-size: 2.5em;
@@ -188,30 +189,61 @@ figure {
   height: auto;
 
 } */
+/* .fh5co-project > a img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: 8px;
+} */
 .fh5co-project > a img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 198px; /* Menambahkan margin bawah */
-  margin-top: 70px; /* Sesuaikan nilai margin atas sesuai kebutuhan */
+  margin-bottom: 8px; /* Menambahkan margin bawah */
+  margin-top: 8px; /* Sesuaikan nilai margin atas sesuai kebutuhan */
+  margin-right: 8px; /* Tambahkan margin sisi kanan di sini */
+  margin-left: 8px;
 }
+
+.fh5co-project,
+.fh5co-project a {
+  background-color: #152d79;
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+
+/* Contoh: Warna latar belakang biru tua */
+/* .fh5co-project {
+  background-color: #c0c0c0;
+} */
+
+/* Contoh: Warna latar belakang hijau muda */
+.fh5co-project a {
+  background-color: #1a3a92;
+}
+
 
 /* Sesuaikan tata letak masonry agar responsif */
 .fh5co-projects-feed {
-  column-count: 3; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
-  column-gap: 10px; /* Sesuaikan jarak antar kolom */
+  column-count: 4; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
+  column-gap: 100%; /* Sesuaikan jarak antar kolom */
 }
 .fh5co-projects-feed .fh5co-project {
   width: 100%; /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
-  margin-bottom: 10px; /* Tambahkan sedikit ruang antar proyek */
+  margin-bottom: 100%; /* Tambahkan sedikit ruang antar proyek */
 }
 .fh5co-projects-feed .fh5co-project {
   float: 100px;
-  margin: 4px 20px auto;
-  width: 290px;
+  margin: 10px 0px 5px;
+  width: 280px;
 }
 @media screen and (max-width: 980px) {
   .fh5co-projects-feed .fh5co-project {
-    margin: 20px 20px 10px;
+    margin: 10px 10px 10px;
   }
 }
 .fh5co-projects-feed .fh5co-project > a {
@@ -228,7 +260,7 @@ figure {
 }
 .fh5co-projects-feed .fh5co-project > a figcaption {
   font-size: 14px;
-  color: #999999;
+  color: #ac1919;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
