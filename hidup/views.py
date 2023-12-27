@@ -8,8 +8,8 @@ def hom(request):
 def comen(request):
   template = loader.get_template('comen.html')
   return HttpResponse(template.render())
-def index(request):
-  template = loader.get_template('index.html')
+def ho(request):
+  template = loader.get_template('hom.html')
   return HttpResponse(template.render())
 def work(request):
   template = loader.get_template('work.html')

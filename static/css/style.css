@@ -172,7 +172,7 @@ figure {
   color: #110e0e;
   background: #0ba8e6;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 470px) {
   #fh5co-header nav ul li a {
     padding: 5px;
   }
@@ -198,10 +198,11 @@ figure {
   margin-left: 8px;
 } */
 .fh5co-project > a img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 8px; /* Menambahkan margin bawah */
   margin-top: 8px; /* Sesuaikan nilai margin atas sesuai kebutuhan */
+  margin-right: 8px;
   margin-right: 8px; /* Tambahkan margin sisi kanan di sini */
   margin-left: 8px;
 }
@@ -229,17 +230,22 @@ figure {
 
 /* Sesuaikan tata letak masonry agar responsif */
 .fh5co-projects-feed {
-  column-count: 4; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
+  column-count: 4px; /* Sesuaikan jumlah kolom sesuai keinginan Anda */
   column-gap: 100%; /* Sesuaikan jarak antar kolom */
 }
-.fh5co-projects-feed .fh5co-project {
-  width: 100%; /* Pastikan setiap proyek mengambil lebar 100% dari kontainernya */
-  margin-bottom: 100%; /* Tambahkan sedikit ruang antar proyek */
+/* .fh5co-projects-feed .fh5co-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+/* } */
+.fh5co-project {
+  width: calc(25% - 20px); /* 25% width for each project with some spacing */
+  margin: 10px;
 }
 .fh5co-projects-feed .fh5co-project {
   float: 100px;
-  margin: 10px 0px 5px;
-  width: 280px;
+  margin: 10px 10px 5px;
+  width: 270px;
 }
 @media screen and (max-width: 980px) {
   .fh5co-projects-feed .fh5co-project {
@@ -333,9 +339,9 @@ figure {
 #fh5co-footer {
   float: left;
   width: 100%;
-  background: #afafaf;
+  background: linear-gradient(to right, #02cca0, #05d5e4, rgb(3, 84, 206));
   text-align: center;
-  color: #111111;
+  color: #f7f3f3;
  
 
 }
@@ -356,7 +362,7 @@ figure {
   bottom: 27px;
   left: 0;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(250, 245, 245, 0.8);
   padding: 5px;
   border-radius: 50%;
 }
@@ -377,14 +383,14 @@ figure {
 /* batas */
 
 #fh5co-footer a:hover, #fh5co-footer a:active, #fh5co-footer a:focus {
-  color: #0854b6 !important;
+  color: #006eff !important;
 }
 #fh5co-footer .social {
   margin-top: 1%;
 }
 #fh5co-footer .social a {
   padding: 5px;
-  color: #030303 !important;
+  color: #f5eeee !important;
 }
 @media screen and (max-width: 480px) {
   #fh5co-footer .social a {

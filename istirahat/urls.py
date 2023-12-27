@@ -20,10 +20,8 @@ from hidup.views import *
 
 urlpatterns = [
     path('', work, name='work'),
-    path('', index1, name='index1'),
-    path('', hom, name='hom'),
+    path('hom', hom, name='hom'),
     path('comen', comen, name='comen'),
-    path('index', index, name='index'),
     path('contact', contact, name='contact'),
     path('about', about, name='about'),
     path('admin/', admin.site.urls),
