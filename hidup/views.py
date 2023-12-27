@@ -23,3 +23,20 @@ def about(request):
 def index1(request):
   template = loader.get_template('index1.html')
   return HttpResponse(template.render())
+
+
+# from django.shortcuts import render
+# from django.http import HttpResponseForbidden
+# from .forms import BeritaForm  
+
+# def index1(request):
+#     if request.method == 'POST':
+#         form = BeritaForm(request.POST)
+#         if form.is_valid():
+          
+#         else:
+#             return HttpResponseForbidden("CSRF verification failed")
+#     else:
+#         form = BeritaForm()
+
+#     return render(request, 'my_template.html', {'form': form})

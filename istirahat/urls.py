@@ -19,6 +19,7 @@ from django.urls import include, path
 from hidup.views import *
 
 urlpatterns = [
+    path('', index1, name='index1'),
     path('', work, name='work'),
     path('hom', hom, name='hom'),
     path('comen', comen, name='comen'),
