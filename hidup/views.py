@@ -37,13 +37,3 @@ def contact(request):
 # from django.shortcuts import render
 # from .forms import ContohForm
 
-# def contoh_view(request):
-#     if request.method == 'POST':
-#         form = ContohForm(request.POST)
-#         if form.is_valid():
-#             # Lakukan sesuatu dengan data formulir yang valid
-#             # Contoh: simpan ke database, kirim email, dll.
-#     else:
-#         form = ContohForm()
-
-#     return render(request, 'contoh_template.html', {'form': form})
