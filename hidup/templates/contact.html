@@ -1,5 +1,90 @@
 {% load static %}
+{% load static %}
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>MR.Q</title>
+    <link rel="icon" href="{% static 'img/logo4.png' %}" type="image/x-icon">
+    <style>
+        link {
+            display: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #fileInput {
+            margin-bottom: 10px;
+        }
+
+        #previewContainer {
+            margin-top: 20px;
+        }
+
+        #previewImage {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Upload Photo</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="fileInput" accept="image/*">
+        <button type="button" onclick="uploadPhoto()">Upload</button>
+    </form>
+    <div id="previewContainer">
+        <img id="previewImage" alt="Preview">
+    </div>
+</div>
+<script>
+    function uploadPhoto() {
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('previewImage');
+        const previewContainer = document.getElementById('previewContainer');
+
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                previewContainer.style.display = 'block';
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a valid image file.');
+        }
+    }
+</script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.masonry.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
+<script src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,4 +169,4 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
 </body>
-</html>
+</html> -->
